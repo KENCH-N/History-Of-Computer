@@ -8,6 +8,7 @@ li {
 
 ul {
     padding: 0;
+    margin: 0;
     list-style-type: none;
     overflow: hidden;
     background-color: black;
