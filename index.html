@@ -6,7 +6,7 @@
       <style>
         body, html {
           height: 100%;
-          
+          font: 400 15px/1.8 "Lato", sans-serif;
         }
 
         .parallax1, .parallax2 {
@@ -24,7 +24,23 @@
           background-image: url("background.jpeg");
           height: 100%
         }
-        
+
+        .title {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          width: 100%;
+          text-align: center;
+          color: #000;
+        }
+
+        .title span.border {
+          background-color: #111;
+          color: #fff;
+          padding: 18px;
+          font-size: 25px;
+          letter-spacing: 10px;
+        }
       </style>
     </head>
     <body>
@@ -35,7 +51,15 @@
         <li><a href=Photo.html>Photos</a></li>
         <li><a href=OtherInfo.html>Pertinent Info.</a></li>
       </ul>
-      <div class="parallax1"></div>
+      
+      <div class="parallax1">
+        <div class="titel">
+          <span class="border">
+            Steve Wozniak
+          </span>
+        </div>
+      </div>
+      
       <div style="height:500px; background-color: #EAECEE; font-size: 18;">
         YAP YAP
       </div>
