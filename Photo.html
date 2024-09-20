@@ -3,6 +3,67 @@
     <head>
       <title>History of Computers: Photos</title>
       <link rel="stylesheet" type="text/css" href="style.css">
+      <style>
+        body, html {
+          height: 100%;
+          background-color: #777;
+
+        }
+
+        .parallax {
+          background-image: url("background6.jpg");
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 100%;
+        }
+
+        .parallax1 {
+          background-image: url("background5.jpg");
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 100%;
+        }
+        .parallax2 {
+          background-image: url("background4.jpg");
+          background-attachment: fixed;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          height: 100%;
+        }
+        
+        .title {
+          position: absolute;
+          left: 0;
+          top: 30%;
+          width: 100%;
+          text-align: center;
+          color: white;
+        }
+
+        .title span.border {
+          background-color: #111;
+          color: #fff;
+          padding: 24px;
+          font-size: 30px;
+          letter-spacing: 10px;
+        }
+
+        .text {
+          height:100px; 
+          background-color: #777
+          font-size: 18px; 
+          color: white;
+          padding-top: 50px;
+          padding-left: 50px;
+          letter-spacing: 3px;
+        }
+
+      </style>
     </head>
     <body>
       <ul>
@@ -11,5 +72,30 @@
         <li><a href=Photo.html>Photos</a></li>
         <li><a href=OtherInfo.html>Pertinent Info.</a></li>
       </ul>
+
+      <div class="parallax">
+        <div class="title">
+          <span class="border">
+            Photos
+          </span>
+        </div>
+      </div>
+      
+        <div class="text">
+        Image One: Steve Wozniak Teaching Students How to Code in 1995
+        </div>
+
+      <div class="parallax1"></div>
+
+      <div class="text">
+        Image Two: Steve Wozniak Posing With Steve Jobs at a Conference
+      </div>
+
+      <div class="parallax2"></div>
+
+      <div class="text">
+        Image Three: Steve Wozniak Giving a Speech At Berkley University
+      </div>
+      <div class="parallax"></div>
     </body>
   </html>
