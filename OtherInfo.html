@@ -4,22 +4,34 @@
       <title>History of Computers: Other Info</title>
       <link rel="stylesheet" type="text/css" href="style.css">
       <style>
-        body {
-          background-image: url("background2.jpg");
+        body, html {
+          height: 100%;
+          background-color: #111;
+        }
+
+        .parallax1, .parallax2 {
           background-attachment: fixed;
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
         }
+        .parallax1 {
+          background-image: url("pixelcut-export.png");
+          height: 100%;
+        }
 
-         .title {
+        .parallax2 {
+          background-image: url("background.jpeg");
+          height: 100%
+        }
+
+        .title {
           position: absolute;
           left: 0;
           top: 30%;
           width: 100%;
           text-align: center;
           color: #000;
-           height: 100%;
         }
 
         .title span.border {
@@ -31,10 +43,22 @@
         }
 
         .text {
+          height:500px; 
+          background-color: #111; 
           font-size: 18px; 
           color: white;
+          padding-top: 150px;
           padding-left: 50px;
-          letter-spacing: 2px;
+          letter-spacing: 3px;
+          line-height: 50px;
+        }
+        .timer {
+          text-align: center;
+          font-size: 60px;
+          background-color: #111;
+          color: white;
+          height: 500px;
+          
         }
       </style>
     </head>
@@ -45,33 +69,53 @@
         <li><a href=Photo.html>Photos</a></li>
         <li><a href=OtherInfo.html>Pertinent Info.</a></li>
       </ul>
-      <div class="title"><span>Other Pertinent Information</span></div>
+
+            <div class="parallax1">
+        <div class="title">
+          <span class="border">
+            Steve Wozniak
+          </span>
+        </div>
+      </div>
+      
       <div class="text">
-        Steve Wozniak’s first creation was a device called the “Blue Box” which was used to hack into phone networks to avoid paying for long distance phone calls, 
+        Name : Steve Wozniak
         <br>
-        which he would go onto sell to students that attended his University.
-      </div>
-      <div class="text">
-      Additionally, he credits the movie “Star Trek”  as the inspiration for the first Macintosh Personal Computer.
-      </div>
-      <div class="text">
-      Steve Wozniak is still on the Apple payroll, bringing in $50 a week.
-      </div>
-      <div class="title"><span>Other Pertinent Information</span></div>
-      <div class="text">
-        "When the Internet first came, I thought it was just the beacon of freedom. People could communicate with anyone, anywhere, and nobody could stop it."
+        Born : August 11, 1950, San Jose, California.
         <br>
-        -Steve Wozniak
-      </div>
-      <div class="text">
-        "All the best people in life seem to like LINUX."
+        Co-founder of Apple with Steve Jobs
         <br>
-        -Steve Wozniak
+        Known for : Co-Founding Apple, Creating the Apple I, Apple II, influencing current Apple, etc.
       </div>
-      <div class="text">
-        "If you try to make such projects, unseen by others, as perfect as any human could, you'll develop skills that other professionals don't have. "
-        <br>
-        -Steve Wozniak
+      
+      <div class="parallax2"></div>
+      <div class="timer">
+        <p id="timer"></p>
+        <p>Until Birthday</p>
       </div>
+      <script>
+
+        var countDownDate = new Date("August 11, 2025 00: 00: 00").getTime();
+        
+        var x = setInterval(function() {
+        
+        var now = new Date().getTime();
+            
+        var distance = countDownDate - now;
+        
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+          document.getElementById("timer").innerHTML = days + "D " + hours + "H "
+          + minutes + "M " + seconds + "S ";
+        
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "OVER";
+          }
+        }, 1000);
+    </script>
     </body>
   </html>
